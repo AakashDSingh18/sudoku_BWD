@@ -1,0 +1,178 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f4ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+h1 {
+  position: relative;
+  top: 20px;
+  font-size: 40px;
+  color: #2c3e7a;
+  margin-top: 20px;
+  letter-spacing: 2px;
+}
+
+p.subtitle {
+  color: #6677aa;
+  text-align: center;
+  font-size: 15px;
+  margin-top: 5px;
+}
+
+.mistakes {
+  display: none;
+  align-items: center;
+  margin-bottom: 16px;
+  justify-content: center;
+  background: #ffe798;
+  color: #a05000;
+  padding: 7px 18px;
+  border-radius: 20px;
+  font-size: 13px;
+  border: 1px solid #e9b077;
+}
+
+.btn-play {
+    display: flex;
+    height: 75px;
+    width: 200px;
+    padding: 20px 0px 0px 70px;
+    background-color: #27ae60;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+}
+
+#message {
+  display: none;
+  font-size: 16px;
+  font-weight: bold;
+  min-height: 24px;
+  color: #27ae60;
+  text-align: center;
+}
+
+#message.error-msg { color: #d63030; }
+
+.board-wrapper {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 4px 24px rgba(44, 62, 122, 0.13);
+    padding: 16px;
+}
+
+#sudoku-board {
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    border: 3px solid #000000;
+    border-radius: 8px;
+    overflow: hidden;
+    display: none;
+}
+
+.cell {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  border: 1px solid #000000;
+  user-select: none;
+  position: relative;
+}
+
+.cell.col-right { border-right: 2.5px solid #000000; }
+.cell.row-bottom { border-bottom: 2.5px solid #000000; }
+
+.cell.selected {
+  background: #cdd6f7 !important;
+}
+
+.cell.error {
+  background-color: #e26969 !important;
+}
+
+.numpad {
+  display: none;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.numpad .row{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.numpad button {
+  padding: 12px 0;
+  width: 85px;
+  height: 40px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #2c3e7a;
+  border-color: #ffffff;
+  background: #eef0fb;
+  cursor: pointer;
+}
+
+.numpad button:hover {
+  background: #c9d4ff;
+  transform: scale(1.07);
+}
+
+.numpad button:active {
+  transform: scale(0.96);
+}
+
+.numpad button.erase-btn {
+  font-size: 12px;
+  background: #ffe5e5;
+  color: #c0392b;
+}
+
+.numpad button.erase-btn:hover {
+  background: #ffc5c5;
+}
+
+.actions {
+  display: none;
+  gap: 10px;
+  margin-top: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.actions button {
+  padding: 10px 24px;
+  border: none;
+  border-radius: 22px;
+  font-size: 13px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.actions button:active { transform: scale(0.95); }
+
+.btn-new {
+  background: #2c3e7a;
+  color: #fff;
+}
+.btn-new:hover, .btn-check:hover {transform: scale(1.07);}
+
+.btn-check {
+  background: #2ab966;
+  color: #fff;
+}
